@@ -4,10 +4,11 @@
 
 <section class="main-container">
   <div class="main-wrapper">
-    <h2>Home</h2>
+    <h3>Welcome To Restaurant Reviews</h3>
+    <h5>This website is currently in beta<h5>
+    <h5>Sathya Ramanathan | Rohan Barve | Susmita Padala | Rob Hess<h5>
     <?php
       if(isset($_SESSION['username'])){
-        echo "Successfully Logged In!";
         echo "<br>";
         echo '<a href="listRestaurant.php">List Restaurants</a>';
         echo "<br>";

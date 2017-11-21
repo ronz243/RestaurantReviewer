@@ -5,7 +5,17 @@
 }
 
 body{
+  margin: 0px;
+  background: url("Gourmet-Restaurant.jpg") no-repeat 50% 50% fixed;
   background-color: #ccc;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover
+}
+
+html body{
+  font-family: 'Quicksand', sans-serif;
 }
 
 a{
@@ -15,7 +25,7 @@ a{
 header nav{
   width:100%;
   height:60px;
-  background-color: white;
+  background-color: black;
 }
 
 header nav ul{
@@ -29,9 +39,15 @@ header nav ul li{
 
 header nav ul li a{
   font-family: sans-serif;
-  font-size: 16px;
-  color: black;
-  line-height: 63px;
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
+  padding: 25px;
+}
+
+header nav ul li a:hover{
+  /*text-decoration: underline;*/
+  background-color: #747;
 }
 
 header .nav-login{
@@ -50,11 +66,18 @@ header .nav-login form input{
   padding: 0px 10px;
   margin-right: 10px;
   border: none;
-  background-color: #ccc;
+  background-color: white;
   font-family: sans-serif;
   font-size: 14px;
   color: black;
   line-height: 30px;
+}
+
+header .nav-login form input:focus{
+width: 200px;
+   -webkit-transition: all .5s ease;
+   -moz-transition: all .5s ease;
+   transition: all .5s ease;
 }
 
 header .nav-login form button{
@@ -70,8 +93,8 @@ header .nav-login form button{
   cursor: pointer
 }
 
-header .nav-login form button: hover{
-  background-color: #ccc;
+header .nav-login form button:hover{
+  background-color: #a3a3a3;
 }
 
 header .nav-login a{
@@ -80,11 +103,27 @@ header .nav-login a{
   width: 70px;
   height: 60px;
   border: none;
-  background-color: white;
+  background-color: black;
+  color: white;
   font-family: sans-serif;
   font-size: 14px;
   line-height: 63px;
   cursor: pointer;
+}
+
+header .nav-login a:hover{
+  text-decoration: underline;
+}
+
+h3{
+  color: white;
+  font-size: 250%;
+}
+
+h5{
+  color: white;
+  font-size: 110%;
+  font-weight: normal;
 }
 
 .main-container{
@@ -94,7 +133,7 @@ header .nav-login a{
 .main-container h2{
   font-family: sans-serif;
   font-size: 40px;
-  color: black;
+  color: white;
   text-align: left;
   line-height: 30px;
 }
@@ -131,6 +170,68 @@ header .nav-login a{
   cursor: pointer;
 }
 
-.signup-form button: hover{
-  background-color: white;
+.signup-form button:hover{
+  background-color: #747;
+}
+
+h1S{
+  color: white;
+}
+
+.main-container a{
+  color: white;
+  font-size: 150%;
+}
+
+.main-container a:hover{
+  text-decoration: underline;
+}
+
+.main-wrapper{
+  text-align: center;
+}
+
+table {
+color: #333;
+width: 650px;
+border-collapse:
+collapse; border-spacing: 0;
+margin: 0 auto;
+}
+
+td, th {
+border: 1px solid transparent; /*Remove border*/
+height: 30px;
+transition: all 0.3s;
+}
+
+th {
+background: #DFDFDF; /*Darken header*/
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+tr:first-child td{
+  text-transform: uppercase;
+  color: #747
+}
+
+tr:nth-child(even) td{
+  background: #F1F1F1;
+}
+
+tr:nth-child(odd) td{
+  background: #FEFEFE;
+}
+
+tr td:hover{
+  background: #747; color: #FFF;
+} /*Hover cell*/
+
+form{
+  color: white;
 }
