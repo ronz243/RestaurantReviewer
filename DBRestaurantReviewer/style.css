@@ -115,6 +115,12 @@ header .nav-login a:hover{
   text-decoration: underline;
 }
 
+/*h1{
+  color: black;
+  font-size: 250%;
+  text-align: center;
+}*/
+
 h3{
   color: white;
   font-size: 250%;
@@ -174,8 +180,37 @@ h5{
   background-color: #747;
 }
 
-h1S{
+h1{
   color: white;
+  font-size: 250%;
+  text-align: center;
+}
+
+input[type=submit]{
+  background-color: #747;
+  border: none;
+  /*color: white;*/
+  padding: 5px 15px;
+  cursor: pointer;
+  text-align: center
+  /*text-decoration: none;
+  display: inline-block;*/
+  /*font-size: 16px;*/
+}
+
+.search{
+  text-align:center;
+}
+
+input[type=text] {
+  width: 90px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 50%;
 }
 
 .main-container a{
@@ -229,7 +264,8 @@ tr:nth-child(odd) td{
 }
 
 tr td:hover{
-  background: #747; color: #FFF;
+  background: #747; 
+  color: #FFF;
 } /*Hover cell*/
 
 form{
