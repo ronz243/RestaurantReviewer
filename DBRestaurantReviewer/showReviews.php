@@ -3,10 +3,10 @@
 // change the value of $dbuser and $dbpass to your username and password
 	include 'includes/db-inc.php';
 
-	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+	/*$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	if (!$conn) {
 		die('Could not connect: ' . mysql_error());
-	}
+	}*/
 // Retrieve name of table selected
   $name = $_POST["name"];
 	$query = "SELECT Restaurant.Name, Reviews.rDescription FROM Restaurant, Reviews WHERE (Restaurant.RestaurantID = Reviews.RestaurantID) AND (Restaurant.Name = '$name')
@@ -17,10 +17,9 @@
 		die("Query to show fields from table failed");
 	}
 
-
 // get number of columns in table
 	$fields_num = mysqli_num_fields($result);
-	echo "<h1S>Table: Reviews </h1>";
+	echo "<h1>Table: Reviews </h1>";
 	echo "<table border='1'><tr>";
 
 // printing table headers
