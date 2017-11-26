@@ -264,7 +264,7 @@ tr:nth-child(odd) td{
 }
 
 tr td:hover{
-  background: #747; 
+  background: #747;
   color: #FFF;
 } /*Hover cell*/
 
