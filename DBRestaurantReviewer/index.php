@@ -5,7 +5,6 @@
 <section class="main-container">
   <div class="main-wrapper">
     <h3>Welcome To Restaurant Reviews</h3>
-    <h5>This website is currently in beta<h5>
     <h5>Sathya Ramanathan | Rohan Barve | Susmita Padala<h5>
     <?php
       if(isset($_SESSION['username'])){
@@ -13,6 +12,8 @@
         echo '<a href="listRestaurant.php">List Restaurants</a>';
         echo "<br>";
         echo '<a href="listCoupon.php">List Coupons</a>';
+        echo "<br>";
+        echo '<a href="myReviews.php">My Reviews</a>';
       }
     ?>
   </div>

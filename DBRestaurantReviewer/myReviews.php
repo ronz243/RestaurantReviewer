@@ -3,11 +3,16 @@
 // change the value of $dbuser and $dbpass to your username and password
 	include 'includes/db-inc.php';
 
+  echo '<br><form class="search" action="addReviewPage.php" method="post">
+        Enter Restaurant To Review: <input type="text" name="rName" placeholder="Restaurant Name..."><br>
+        <input type="submit">
+        </form></br>';
 
   echo '<br><form class="search" action="deleteReview.php" method="post">
         Delete Reviews: <input type="text" name="deleteName" placeholder="Delete by ReviewID..."><br>
         <input type="submit">
 				</form></br>';
+
 
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	if (!$conn) {
@@ -26,7 +31,7 @@
 	}
 // get number of columns in table
 	$fields_num = mysqli_num_fields($result);
-	echo "<h1S>Table: Reviews </h1>";
+	echo "<h1> $username | Reviews </h1>";
 	echo "<table border='1'><tr>";
 
 // printing table headers

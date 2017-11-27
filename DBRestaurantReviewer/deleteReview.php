@@ -20,7 +20,7 @@
     die('Could not delete data:');
   }
 
-  echo "Deleted data successfully\n";
+  echo "<script type='text/javascript'> document.location = 'myReviews.php'; </script>";
 
 	mysqli_free_result($result);
 	mysqli_close($conn);
