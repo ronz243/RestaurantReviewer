@@ -18,10 +18,11 @@ if (isset($_POST['submit'])){
       $sql = "SELECT * FROM User WHERE username='$username'";
       $result = mysqli_query($conn, $sql);
       $resultCheck = mysqli_num_rows($result);
+      //error message username
       if($resultCheck < 1){
-        echo "Wrong Username!";
-        header("Location: ../index.php?login==erroruser");
-        exit();
+        $message_status = "Wrong Username!";
+        echo "<script type='text/javascript'>alert('$message_status');</script>";
+        echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
       }
       else{
         if($row = mysqli_fetch_assoc($result)){
@@ -38,10 +39,11 @@ if (isset($_POST['submit'])){
             header("Location: ../index.php?login==success");
             exit();
           }
+          //Error message
           else{
-            echo "Wrong Password!";
-            header("Location: ../index.php?login==errorpwd");
-            exit();
+            $message_status = "Wrong Password!";
+            echo "<script type='text/javascript'>alert('$message_status');</script>";
+            echo "<script type='text/javascript'> document.location = '../index.php'; </script>";
           }
         }
       }
