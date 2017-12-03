@@ -26,9 +26,6 @@
         <?php
           /*Show logout button when logged in*/
           if(isset($_SESSION['username'])){
-            echo '<a href="listRestaurant.php">List Restaurants</a>';
-            echo '<a href="listCoupon.php">List Coupons</a>';
-            echo '<a href="myReviews.php">My Reviews</a>';
             echo '<form action="includes/logout-inc.php" method="POST">
                   <button type="submit" name="submit">Logout</button>
                   </form>';
