@@ -8,7 +8,7 @@
 		die('Could not connect: ' . mysql_error());
 	}*/
 // Retrieve name of table selected
-	$query = "SELECT RestaurantID, Name, CulinaryTaste FROM Restaurant ";
+$query = "SELECT Restaurant.RestaurantID, Restaurant.Name, Restaurant.CulinaryTaste, Menu.FoodName, Menu.Description, Menu.Cost FROM Restaurant, Menu WHERE Restaurant.RestaurantID=Menu.RestaurantID";
 
 	$result = mysqli_query($conn, $query);
 	if (!$result) {
