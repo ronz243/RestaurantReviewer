@@ -9,7 +9,7 @@
   $c_name = $_POST["c_name"];
 
 // Check if user input is an actual restaurant
-  $check_status = "SELECT Name FROM Restaurant WHERE Name = '$c_name' "; //Get data from table
+  $check_status = "SELECT RestaurantName FROM Coupon WHERE RestaurantName = '$c_name' "; //Get data from table
   $result_status = mysqli_query($conn, $check_status); //Execute
   if($row_status = mysqli_fetch_assoc($result_status)){ //Checks table data
 
@@ -17,6 +17,7 @@
   else{
     $message_status = "Invalid Restaurant";
     echo "<script type='text/javascript'>alert('$message_status');</script>";
+    echo "<script type='text/javascript'> document.location = 'listCoupon.php'; </script>";
     //header("Location: ../listCoupon.php");
     //exit();
   }

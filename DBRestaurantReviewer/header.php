@@ -15,6 +15,12 @@
     <div class="main-wrapper">
       <ul>
         <li><a href="index.php">Home</a></li>
+        <?php if(isset($_SESSION['username'])) : ?>
+          <li><a href="listRestaurant.php">List Restaurants</a></li>
+          <li><a href="listCoupon.php">List Coupons</a></li>
+          <li><a href="myReviews.php">My Reviews</a></li>
+        <?php endif; ?>
+
       </ul>
       <div class="nav-login">
         <?php

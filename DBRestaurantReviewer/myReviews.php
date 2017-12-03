@@ -29,9 +29,21 @@
 	if (!$result) {
 		die("Query to show fields from table failed");
 	}
+
+// Get user points
+  $querya = "SELECT points FROM User WHERE Username = '$username' ";
+	$resulta = mysqli_query($conn, $querya);
+	if (!$resulta) {
+		die("Query to show fields from table failed");
+	}
+  while($rowa = mysqli_fetch_row($resulta)) {
+    foreach($rowa as $points)
+      echo "</tr>\n";
+  }
+
 // get number of columns in table
 	$fields_num = mysqli_num_fields($result);
-	echo "<h1> $username | Reviews </h1>";
+	echo "<h1> $username | Reviews | Points: $points </h1>";
 	echo "<table border='1'><tr>";
 
 // printing table headers

@@ -19,7 +19,7 @@ $query = "SELECT Restaurant.RestaurantID, Restaurant.Name, Restaurant.CulinaryTa
         Search Reviews: <input type="text" name="name" placeholder="Search..."><br>
         <input type="submit">
 				</form></br>';
-				
+
 	echo '<br><form class="search" action="showCoupons.php" method="post">
         Search Coupons: <input type="text" name="name" placeholder="Search..."><br>
         <input type="submit">

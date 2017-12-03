@@ -202,17 +202,6 @@ input[type=submit]{
   text-align:center;
 }
 
-input[type=text] {
-  width: 90px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-}
-
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-  width: 50%;
-}
-
 .main-container a{
   color: white;
   font-size: 150%;
@@ -280,4 +269,8 @@ a1{
 
 a1:hover{
   text-decoration: underline;
+}
+
+div1{
+  background: white;
 }

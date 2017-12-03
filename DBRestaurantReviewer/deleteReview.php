@@ -11,8 +11,18 @@
 
   $reviewID = $_POST['deleteName'];
 
-  $query = "DELETE FROM Reviews
-            WHERE Reviews.ReviewID = '$reviewID'";
+  // Check if user input is an actual restaurant ID
+    $check_status = "SELECT ReviewID FROM Reviews WHERE ReviewID = '$reviewID' "; //Get data from table
+    $result_status = mysqli_query($conn, $check_status); //Execute
+    if($row_status = mysqli_fetch_assoc($result_status)){ //Checks table data
+      $query = "DELETE FROM Reviews
+                WHERE Reviews.ReviewID = '$reviewID'";
+    }
+    else{
+      $message_status = "Invalid Restaurant ID";
+      echo "<script type='text/javascript'>alert('$message_status');</script>";
+      echo "<script type='text/javascript'> document.location = 'myReviews.php'; </script>";
+    }
 
 
 	$result = mysqli_query($conn, $query);
